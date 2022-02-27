@@ -5,7 +5,8 @@
     </div>
  
     <div class="card-body">
-        <form class="row g-3">
+        <form class="row g-3" method="POST" enctype="multipart/form-data" id="upload-image" action="{{ url('save') }}">
+          @csrf
           <div class="col-md-12 mb-3">
             <label class="form-label">Name</label>
             <input type="text" name="name" class="form-control">
@@ -15,7 +16,7 @@
           </div>
           <div class="col-md-12 mb-3">
             <label class="form-label">Email address</label>
-            <input type="email" class="form-control">
+            <input type="email" name="email" class="form-control">
             @error('email')
                 <div class="alert alert-danger form-text">{{ $message }}</div>
             @enderror
@@ -29,7 +30,7 @@
           </div>
           <div class="col-md-12 mb-3">
             <label class="form-label">Date</label>
-            <input type="date" class="form-control">
+            <input type="date" name="date" class="form-control">
           </div>
           <div class="col-md-4 mb-3">
             <label for="inputState" class="form-label">Hours</label>
