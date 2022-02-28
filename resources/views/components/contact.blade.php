@@ -30,7 +30,7 @@
           </div>
           <div class="col-md-12 mb-3">
             <label class="form-label">Date</label>
-            <input type="date" name="date" class="form-control">
+            <input type="date" name="date" class="form-control" value="<?php echo date('Y-m-d'); ?>">
           </div>
           <div class="col-md-4 mb-3">
             <label for="inputState" class="form-label">Hours</label>
